@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 interface ExpenseRepository {
     fun observeExpenses(): Flow<AppResult<List<Expense>, AppError.Local>>
 
-    fun observeExpensesByRange(startMilli : Long, endMilli : Long)
+    fun observeExpensesByRange(startMilli : Long, endMilli : Long) : Flow<AppResult<List<Expense>,AppError.Local>>
 
     suspend fun upsertExpense(expense : Expense): AppResult<Unit, AppError.Local>
 
