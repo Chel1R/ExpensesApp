@@ -19,7 +19,7 @@ import androidx.room.Index
     indices = [Index("categoryId")]
 )
 data class ExpenseEntity(
-    val id : Int,
+    val id : Long,
     val title : String,
     val amount : Double,
     val dateMillis : Long,
